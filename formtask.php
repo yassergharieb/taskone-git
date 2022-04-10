@@ -12,7 +12,6 @@ return  $input;
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
-// Array ( [image] => Array ( [name] => 272805827_117368574168395_7345770231169866208_n.jpg [full_path] => 272805827_117368574168395_7345770231169866208_n.jpg [type] => image/jpeg [tmp_name] => C:\xampp\tmp\phpE3F4.tmp [error] => 0 [size] => 89786 ) ) * title : title length must be over 20 char
 
 
 $title = clean($_POST['title']);
@@ -21,7 +20,7 @@ $content = clean($_POST['content']);
 
 if(!empty($_FILES['image'] ['name'])) {
 
-// print_r($_FILES);
+
 
 $name = $_FILES['image'] ['name'];
 $type = $_FILES['image'] ['type'];
@@ -50,10 +49,6 @@ if (in_array($extension, $allowed_extension)) {
   } else { echo "try again";}
 
 }
-
-
-
-
 }
 else {echo "image required";}
 
@@ -107,15 +102,9 @@ if (count($errors) > 0) {
 
 
 }
-
-
-
-
-
-
 }
 
-?> /*
+?> 
 
 
 <!DOCTYPE html>
